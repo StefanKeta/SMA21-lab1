@@ -37,5 +37,46 @@
         android:text="Hello there"
         android:textSize="20sp"/>
 
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_below="@id/tName"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/bShare"
+            android:text="Share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            />
+
+        <Button
+            android:id="@+id/bSearch"
+            android:text="Search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            />
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonsLayout"
+
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        />
+
+
+
+
 
 </RelativeLayout>

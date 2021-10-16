@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".intents.MainIntentActivity">
+
+    <Button
+        android:id="@+id/intent_main_view_google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Google VIEW"
+        />
+    <Button
+        android:id="@+id/intent_main_view_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="00401213456 VIEW"
+        />
+    <Button
+        android:id="@+id/intent_main_SMA_google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Google SMA.LAUNCH"
+        />
+    <Button
+        android:id="@+id/intent_main_SMA_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="00401213456 SMA.LAUNCH"
+        />
+
+</LinearLayout>

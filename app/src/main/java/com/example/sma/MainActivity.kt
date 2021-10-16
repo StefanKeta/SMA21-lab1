@@ -119,7 +119,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
             val intent = Intent()
             intent.action = Intent.ACTION_VIEW
             intent.data = Uri.parse("http://www.google.com/search?q=${nameET.text}")
-            Log.d("IntentData", "searchPressed: ${intent.data}")
             startActivity(intent)
         } else {
             Toast.makeText(this, "Text must be filled", Toast.LENGTH_SHORT)

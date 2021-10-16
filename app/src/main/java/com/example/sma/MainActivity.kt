@@ -11,6 +11,7 @@ import android.support.v7.app.AlertDialog
 import android.util.Log
 import android.view.View
 import android.widget.*
+import com.example.sma.lifecycle.ActivityA
 
 class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnItemSelectedListener {
 
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
     private lateinit var spinner: Spinner
     private lateinit var btnSearch: Button
     private lateinit var btnShare: Button
+    private lateinit var btnSwitch: Button
     private val colors: Map<String, Int> = mapOf(
         "White" to R.color.white,
         "Black" to R.color.black,
@@ -47,6 +49,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, colors.keys.toList())
         spinner.adapter = adapter
         spinner.onItemSelectedListener = this
+        btnSwitch = findViewById(R.id.lifecycle_screen_switch_btn)
+        btnSwitch.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -54,6 +58,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
             btnClick.id -> sayHelloPressed()
             btnSearch.id -> searchPressed()
             btnShare.id -> sharePressed()
+            btnSwitch.id -> goToLifecyclesActivity()
         }
 
     }
@@ -120,5 +125,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
             Toast.makeText(this, "Text must be filled", Toast.LENGTH_SHORT)
                 .show()
         }
+    }
+
+    private fun goToLifecyclesActivity(){
+        val intent : Intent = Intent(this,ActivityA::class.java)
+        startActivity(intent)
     }
 }

@@ -77,6 +77,12 @@
 
 
 
-
+    <Button
+        android:id="@+id/lifecycle_screen_switch_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Go to lifecycle"
+        />
 
 </RelativeLayout>
